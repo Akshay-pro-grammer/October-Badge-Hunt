@@ -68,3 +68,52 @@ class Solution {
         return helper(arr,expression);
     }
 }
+//Approach 2
+//using stack non recursive
+class Solution {
+    public boolean parseBoolExpr(String expression) {
+        //we will create a stack of characters
+        Stack<Character> s1=new Stack<>();
+        //convert the string to a character array
+        char array[]=expression.toCharArray();
+        //for each characters in array
+        for(char ch:array){
+            //if we encounter a comma or an opening parenthesis we skip it
+            if(ch==',' || ch=='('){
+                continue;
+            }
+            //push the stack if tf&|! is the current char
+            if(ch=='t' || ch=='f' || ch=='&' || ch=='|' || ch=='!'){
+                s1.push(ch);
+            }
+            //if we encounter a closing bracket we know we have to know check the stacak and empty it until an operator shows up
+            else if(ch==')'){
+                //we will keep a check if the sequence popping out from stack has false or true
+                boolean hastrue=false,hasfalse=false;
+                //until the operetor comes
+                while(s1.peek()!='!' && s1.peek()!='&' && s1.peek()!='|'){
+                    //get the top and update the variables
+                    char top=s1.pop();
+                    if(top=='t') hastrue=true;
+                    if(top=='f') hasfalse=true;
+                }
+                //now the stack top has operator
+                //we will check it and act accordingly to the operator
+                char operator=s1.pop();
+                // logic :- if we have even one true or one false , we can determine the answers of logical or and not
+                //if we have and as operator and we have a false , the whole answer will be false
+                //similarly if we have a or and we encounter one true then whole equation becomes true
+                // not is unary and it requries only to check if it has true or not
+                if(operator =='!'){
+                    s1.push(hastrue?'f':'t');
+                }else if(operator=='&'){
+                    s1.push(hasfalse?'f':'t');
+                }else if (operator=='|'){
+                    s1.push(hastrue?'t':'f');
+                }
+            }
+        }
+        // the answer remains at the top
+        return s1.peek()=='f'?false:true;
+    }
+}
