@@ -36,6 +36,7 @@ Welcome to my **October Badge Hunt** on LeetCode! This is my first attempt to ac
 26. **2458. Height of Binary Tree After Subtree Removal Queries** (Hard)
 27. **1277 Count square submatrices with all ones** (Medium)
 28. **2501 Longest Square Streak in an Array** (Medium)
+29. **2684 Maximum number of moves in a grid** (Medium)
 ---
 
 ## 📝 Notes
