@@ -37,6 +37,7 @@ Welcome to my **October Badge Hunt** on LeetCode! This is my first attempt to ac
 27. **1277 Count square submatrices with all ones** (Medium)
 28. **2501 Longest Square Streak in an Array** (Medium)
 29. **2684 Maximum number of moves in a grid** (Medium)
+30. **1671 Minimum Number of Removals to Make Mountain Array** (Hard)
 ---
 
 ## 📝 Notes
