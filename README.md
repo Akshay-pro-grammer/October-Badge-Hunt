@@ -38,6 +38,7 @@ Welcome to my **October Badge Hunt** on LeetCode! This is my first attempt to ac
 28. **2501 Longest Square Streak in an Array** (Medium)
 29. **2684 Maximum number of moves in a grid** (Medium)
 30. **1671 Minimum Number of Removals to Make Mountain Array** (Hard)
+31. **2463 Minimum Total Distance Traveled** (Hard)
 ---
 
 ## 📝 Notes
@@ -47,3 +48,4 @@ Welcome to my **October Badge Hunt** on LeetCode! This is my first attempt to ac
 ---
 
 Thanks for following along! Stay tuned for more updates as I continue my hunt for the October Badge 🏅.
+# GOAL ACHIEVED
